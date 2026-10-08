@@ -1,0 +1,352 @@
+{
+  "created_at": "2026-10-08T01:18:55.592579+00:00",
+  "target": "Orin NX 16 GB / Linux aarch64",
+  "contains_secrets_or_weights": false,
+  "files": [
+    {
+      "path": ".env.example",
+      "bytes": 1355,
+      "sha256": "7eb4b7a8790c5153911430566e977cc95d4000c6fb8595f38bea630a3ead0d3e"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 170,
+      "sha256": "a577e047a7c9f258094da0b2ec90b9f9eded6f3b8b6abe839ceb916ac8c71ec4"
+    },
+    {
+      "path": "deploy/constraints-orin-torch.txt",
+      "bytes": 350,
+      "sha256": "4ece41c02aaf62e5aa6baeb89f4ccbb1860f9337687d2d270d6811cfe1b0fd64"
+    },
+    {
+      "path": "deploy/orin-nx.env.example",
+      "bytes": 1315,
+      "sha256": "c4ae67c0f34c6d89eef82fd4efdcd78b2339f29ce44b0a48e3b18e6ad77de5ef"
+    },
+    {
+      "path": "deploy/patrick-echo-cancel.conf",
+      "bytes": 695,
+      "sha256": "1431c97943ab8ae8f2a611ca32ba5e850435797ee238da8793165e5919f207cc"
+    },
+    {
+      "path": "docs/chatterbox-q8.md",
+      "bytes": 1565,
+      "sha256": "182092ade4f54636e9ad55696f277821ca19535eb52c7705a271d42b8759a034"
+    },
+    {
+      "path": "docs/code-reference.md",
+      "bytes": 23171,
+      "sha256": "c7abf9384db6573e13ad9d47db0737e0ed06ceef74328888c6721318a58c258f"
+    },
+    {
+      "path": "docs/hybrid-routing.md",
+      "bytes": 6788,
+      "sha256": "7d021c8b0f44fac0f8a817b836d7060a3a5c8d243d235aef926660022429c041"
+    },
+    {
+      "path": "docs/jetson-migration.md",
+      "bytes": 13225,
+      "sha256": "00a1b9a3fb19cc1835b9ee9044df0858fcafec074fb500a7dc36b70b852618cb"
+    },
+    {
+      "path": "knowledge/revobots.json",
+      "bytes": 20856,
+      "sha256": "9ab8a4410bb301f8d7cac5890821351c8c53d537b3faaab2ae1219d9f5228b9c"
+    },
+    {
+      "path": "patrick/__init__.py",
+      "bytes": 51,
+      "sha256": "f47b8039acd58598f07723a7e14c6905c2aa815cf172fb1b0207b8f3c5d95590"
+    },
+    {
+      "path": "patrick/__main__.py",
+      "bytes": 33,
+      "sha256": "c13eb66970ae37b8b044f428b309e67868814b90a8bb408806f3316ce4dfbc5b"
+    },
+    {
+      "path": "patrick/audio.py",
+      "bytes": 8583,
+      "sha256": "4ea7022fdea5a25eb5c69a157799c70cb37f001ec33ea53fffa880a03303ddce"
+    },
+    {
+      "path": "patrick/chatterbox_speech.py",
+      "bytes": 8591,
+      "sha256": "143f3342905d896b3f88fa8413ae25a58e9faec917c3688f09782ad100b14fb5"
+    },
+    {
+      "path": "patrick/cli.py",
+      "bytes": 7342,
+      "sha256": "5600eb9d8c09d5540238fd52c8eec5790d9d422a80d47d54849000c0c644c39b"
+    },
+    {
+      "path": "patrick/config.py",
+      "bytes": 2924,
+      "sha256": "6aec37bfbcb01f0598f9e8ec588cdf5f8948430cb5dddbc138589a46bd41e420"
+    },
+    {
+      "path": "patrick/controller.py",
+      "bytes": 10056,
+      "sha256": "95596e78b9ddf1ae2294bc2f4a9246b8579f876dbb93fed34ad284e2e5388108"
+    },
+    {
+      "path": "patrick/endpoint.py",
+      "bytes": 2045,
+      "sha256": "6758378d0e98d92e280fb90990b254c040b529ab4f1cfe26df9d6f4a0ca35620"
+    },
+    {
+      "path": "patrick/environment.py",
+      "bytes": 1261,
+      "sha256": "b8bd32111737787f6b046bd4caf5a8b300830976b464450683da26c9d954c2b5"
+    },
+    {
+      "path": "patrick/failover.py",
+      "bytes": 6598,
+      "sha256": "678c0a6c5bf6218ada2c8c023b0ceb0d8446ee9e6796563492ccfd03c9b1e8ee"
+    },
+    {
+      "path": "patrick/hybrid.py",
+      "bytes": 4849,
+      "sha256": "25e600bbfcca9f5ce662e05f03a4e18064fd760cc5c6d1f167554be252615b62"
+    },
+    {
+      "path": "patrick/knowledge.py",
+      "bytes": 4070,
+      "sha256": "6e8a63fc491ca63a3c7e76e8a364d5d164c824b1083abd5d649df1a7ef4eba6c"
+    },
+    {
+      "path": "patrick/languages.py",
+      "bytes": 1799,
+      "sha256": "386f5463f36cb1d4ff66c9b68a2f9393e0db00d63363a5e013b35c9d25b3975b"
+    },
+    {
+      "path": "patrick/local.py",
+      "bytes": 1347,
+      "sha256": "5371f60a3edac4ace88bfeafc26bc8a2ce2ec9a87c1fc3f9e1b426c1e3ae3ee3"
+    },
+    {
+      "path": "patrick/ollama_settings.py",
+      "bytes": 1585,
+      "sha256": "db5fee0a4faf251b5e05aff7b8b99d07bc58e670c1cc7aff9f77a19e92fd3198"
+    },
+    {
+      "path": "patrick/playback.py",
+      "bytes": 10156,
+      "sha256": "25cc8f99099fa9155fd7110ed8802770cb05666a5be0965c399ceeef8f3d1e9a"
+    },
+    {
+      "path": "patrick/ports.py",
+      "bytes": 1498,
+      "sha256": "7b7c941ed02d87280fe64cbcf5ab7fe79094a1375b67f55cc0ce400bb2cc3f43"
+    },
+    {
+      "path": "patrick/providers.py",
+      "bytes": 27019,
+      "sha256": "c7055fbcf30862a46696a4dc80842efa21a5149fc5caca01d9fad5b157af2430"
+    },
+    {
+      "path": "patrick/qwen_asr.py",
+      "bytes": 5782,
+      "sha256": "2bf26a77b9d4274c6c1ff865500ad9c386a05883cab8d1a77ed4b5e7f5226245"
+    },
+    {
+      "path": "patrick/speech_text.py",
+      "bytes": 2196,
+      "sha256": "bc4ed73460aa23a100113f714c80c29eb2a620988a456d3526afd3692a4bcd45"
+    },
+    {
+      "path": "patrick/system_prompt.txt",
+      "bytes": 14209,
+      "sha256": "e21887ee2e0288d5de40cee08263cc4796a150d31b8205a90ba51835a2da54e6"
+    },
+    {
+      "path": "patrick/text_normalization.py",
+      "bytes": 742,
+      "sha256": "79effcc8730407218816f5ea8fd6ac8c701f1623b7160a3ddfc501df96746b22"
+    },
+    {
+      "path": "patrick/tools.py",
+      "bytes": 7903,
+      "sha256": "a5fe813caafb8c7aabc0e974b354c5fcb1ea95eacd492e94f319d8092bdbe7d6"
+    },
+    {
+      "path": "patrick/transcription.py",
+      "bytes": 3802,
+      "sha256": "a29466f337d720cfc6a4fe4187088f5d8648759f573fa953854e52f528132b8e"
+    },
+    {
+      "path": "patrick/tts.ps1",
+      "bytes": 355,
+      "sha256": "e87b694f8301bc75849b84773f7d323e46164695e25f7ffc9ef134dc4d59c056"
+    },
+    {
+      "path": "patrick/turn_planning.py",
+      "bytes": 5047,
+      "sha256": "bce26cdc46136d94e5eb0be9e88ddee89a3c40647ef3ab60b3071033735a33ca"
+    },
+    {
+      "path": "patrick.toml",
+      "bytes": 444,
+      "sha256": "f731195e3275561213701e6ff2e4537f5e5bd06273d464ad60e3e9f1bf68f27b"
+    },
+    {
+      "path": "PROJECT_HANDOFF.md",
+      "bytes": 1884,
+      "sha256": "1bf22f1b750cd5b06000ed2380ba176e8fbb1ed90cfa2431776021ebe193d800"
+    },
+    {
+      "path": "pyproject.toml",
+      "bytes": 669,
+      "sha256": "fa57f6023f315f82b1ac516abd9c44996212f6da3b11ba078dee5085d3c86464"
+    },
+    {
+      "path": "README.md",
+      "bytes": 15064,
+      "sha256": "3fdae818c177bd7da1371f3d59d319e1c097f7c6ea08140837158aada131b5ca"
+    },
+    {
+      "path": "requirements-chatterbox-runtime.txt",
+      "bytes": 534,
+      "sha256": "57d0a01db977d11253d6a81e8c604167056d675a8a99060c261b2903ca71c9ba"
+    },
+    {
+      "path": "requirements-chatterbox-v3.txt",
+      "bytes": 193,
+      "sha256": "603be61427f2ee05271ba2c307e6b53b9ede102386f4ad2b21c0b32ccc6e6a84"
+    },
+    {
+      "path": "requirements-qwen-asr-runtime.txt",
+      "bytes": 309,
+      "sha256": "f79a47fc6ec78025aaaf559ac4662567c74c177809d9893cbb98d8a2d79ff269"
+    },
+    {
+      "path": "requirements-qwen-asr.txt",
+      "bytes": 100,
+      "sha256": "217370962c2ad49cf0c94003190c6a179f8f49745c9905400cf72e14eb129277"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 99,
+      "sha256": "6648f35a88040c3a61965d4278b89f50ea4e7b9a4088a8bed740a77b9c53820d"
+    },
+    {
+      "path": "scripts/build_chatterbox_q8_jetson.sh",
+      "bytes": 1655,
+      "sha256": "c96df55d0c0a72bbe3ba788791ad4c8933f3cf855d2b361fd05d0d1d7005e7fc"
+    },
+    {
+      "path": "scripts/download_chatterbox_q8.py",
+      "bytes": 1633,
+      "sha256": "47cfc84662bae5faf2c0d5a94fd4f4544e77a6104e4960c387b0f267a469b447"
+    },
+    {
+      "path": "scripts/inspect_chatterbox_gguf.py",
+      "bytes": 2049,
+      "sha256": "4e2257a123440b35589b6a40d4d7b4af0720a488cfb6ef284037c1c8b25f78a1"
+    },
+    {
+      "path": "scripts/speech-samples/en.txt",
+      "bytes": 46,
+      "sha256": "016c17f6bc16425ed3e5f06124d76a50d355af952795227d12f1e4acc9f8b99e"
+    },
+    {
+      "path": "scripts/speech-samples/es.txt",
+      "bytes": 44,
+      "sha256": "b3f4dfdc346cf78eacf3c549b8bdd5159013baf22f01215e29905906ad9ce86b"
+    },
+    {
+      "path": "scripts/speech-samples/hi.txt",
+      "bytes": 106,
+      "sha256": "cab55830471426a7b048564871963d4f83a6c0bf0bb6c523c94fb78057ee34f9"
+    },
+    {
+      "path": "scripts/speech-samples/ja.txt",
+      "bytes": 70,
+      "sha256": "8327485bb811848ad53684e8673ce4e77794940f938bf57ffb5714788ba07bf5"
+    },
+    {
+      "path": "scripts/speech-samples/zh.txt",
+      "bytes": 52,
+      "sha256": "edeb9e5d1262933eef69e59b80eeef1494cb7bc6b61a912c6cd9884035d32ede"
+    },
+    {
+      "path": "scripts/test_chatterbox.py",
+      "bytes": 3929,
+      "sha256": "8a7d13203076e698f47cada62698e146acaeb23776107ea4051ff218d8b37001"
+    },
+    {
+      "path": "scripts/test_chatterbox_q8.py",
+      "bytes": 4115,
+      "sha256": "2122819da831430f9ba04d72f0feacafbb6e36505be399315244c8ce6ee2d404"
+    },
+    {
+      "path": "scripts/test_multilingual_speech.py",
+      "bytes": 3136,
+      "sha256": "60e9e53ce279a1568ffa2226ea8cd64c612381d455c813ff03a8fdcc577c3e79"
+    },
+    {
+      "path": "tests/test_audio.py",
+      "bytes": 8779,
+      "sha256": "c0e6a3dc8a62f13cca3521729642dc65df4f7f9b0b5929d0ed809844babb5026"
+    },
+    {
+      "path": "tests/test_chatterbox_speech.py",
+      "bytes": 2229,
+      "sha256": "1bc1b27f77112c964266f5ad63dd51beafdaaa5a68676878dcdb21df590986cb"
+    },
+    {
+      "path": "tests/test_controller.py",
+      "bytes": 10849,
+      "sha256": "4dddcc09616788e8ad40cb294f3009dbfe437a254e5800dc1077a8d38f8eab44"
+    },
+    {
+      "path": "tests/test_failover.py",
+      "bytes": 6844,
+      "sha256": "009f3cc9a408acf24eb76426b74218b3032d8469fc0e8358ea14dafce78f72db"
+    },
+    {
+      "path": "tests/test_hybrid.py",
+      "bytes": 13670,
+      "sha256": "ab5426e14ed42c6bd8ae65eb618be10cfe25cf5f7c8d0318a418aad081287cb8"
+    },
+    {
+      "path": "tests/test_knowledge.py",
+      "bytes": 4164,
+      "sha256": "0ccb90d60528025e5027e201b778f83f39991f8abe0f2c97346f270ff7b57210"
+    },
+    {
+      "path": "tests/test_languages.py",
+      "bytes": 1202,
+      "sha256": "b57436418cd3e0a33b5bdf6cbe71f026be2adf1ce829997755ca452ef4779fbb"
+    },
+    {
+      "path": "tests/test_ollama_settings.py",
+      "bytes": 1105,
+      "sha256": "5c50d92a48e3017a200f129d96bd623e594a7cf25d700dc71f489e56eac8527e"
+    },
+    {
+      "path": "tests/test_providers.py",
+      "bytes": 9408,
+      "sha256": "636e3d651031159452ddea47f81bb6dbe0031823ea3d562d3a9d19d2d60d5993"
+    },
+    {
+      "path": "tests/test_qwen_asr.py",
+      "bytes": 2799,
+      "sha256": "bb83f09cba3bed45bf16e33516a868a3f9393cd076e40b5c41b483cfcfa75e9b"
+    },
+    {
+      "path": "tests/test_speech_text.py",
+      "bytes": 1931,
+      "sha256": "d14161d9b3bc09a19ecea9b4732f01b8a9dd158008c2d5269fa64e9a0aaf8aeb"
+    },
+    {
+      "path": "tests/test_tools.py",
+      "bytes": 7672,
+      "sha256": "eda42c1fa7341aa6b23d4aaf9b36b5b19c6194ac57f63df2808b4c93fd62c12d"
+    },
+    {
+      "path": "tests/test_transcription.py",
+      "bytes": 6332,
+      "sha256": "0eb9918c49769015f006154e2056242469b3018f2193d395d53f8ec1ab03415c"
+    }
+  ]
+}

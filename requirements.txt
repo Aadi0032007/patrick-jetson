@@ -1,0 +1,2 @@
+# Install the project and microphone dependencies in your chatbot conda environment.
+-e .[audio]

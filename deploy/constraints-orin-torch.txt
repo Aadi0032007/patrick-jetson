@@ -1,0 +1,6 @@
+# Fixed working Orin NX Conda framework builds. Do not upgrade or downgrade.
+# Use with pip -c, or export PIP_CONSTRAINT to this file's absolute path.
+# Capture the installed Torchaudio version too before installing speech workers;
+# see docs/jetson-migration.md. Do not copy the Windows Torchaudio pin.
+torch==2.14.1+cu132
+torchvision==0.29.1+cu132

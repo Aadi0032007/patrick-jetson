@@ -1,0 +1,14 @@
+# Install in .qwen-asr-env; install platform-matched Torch/Torchaudio first.
+# Install the core separately with --no-deps -r requirements-qwen-asr.txt.
+transformers==4.57.6
+accelerate==1.12.0
+nagisa==0.2.11
+soynlp==0.0.493
+qwen-omni-utils
+librosa==0.11.0
+soundfile>=0.13,<1
+sox
+gradio
+flask
+pytz
+hf_xet>=1,<2

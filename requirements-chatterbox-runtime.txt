@@ -1,0 +1,19 @@
+# Install ONLY in .chatterbox-env (created with --system-site-packages).
+# Chatterbox itself is installed separately with --no-deps to preserve CUDA Torch.
+# This deliberately overrides Chatterbox 0.1.7's Torch 2.6 requirement.
+numpy>=1.24,<2
+librosa==0.11.0
+s3tokenizer
+transformers==5.2.0
+diffusers==0.29.0
+resemble-perth==1.0.1
+# Perth 1.0.1 still imports pkg_resources, removed from newer setuptools.
+setuptools==80.9.0
+conformer==0.3.2
+safetensors==0.5.3
+spacy-pkuseg
+pykakasi==2.3.0
+pyloudnorm
+omegaconf
+soundfile
+langid==1.1.6

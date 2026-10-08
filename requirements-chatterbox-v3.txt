@@ -1,0 +1,2 @@
+# Official V3-capable source pinned for reproducibility. Install with --no-deps.
+chatterbox-tts @ https://github.com/resemble-ai/chatterbox/archive/5de7a54aa4e5e2baadb0182dde554908b48b85c2.zip

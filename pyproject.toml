@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "patrick-assistant"
+version = "0.1.0"
+description = "Local-first robot conversation runtime"
+requires-python = ">=3.10"
+dependencies = ["tomli>=2,<3; python_version < '3.11'"]
+
+[project.optional-dependencies]
+audio = ["vosk>=0.3.45,<0.4", "sounddevice>=0.5,<0.6", "webrtcvad-wheels>=2.0.14,<3"]
+speech-tests = ["numpy>=1.24,<2", "soundfile>=0.13,<1", "scipy>=1.11,<2"]
+
+[project.scripts]
+patrick = "patrick.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["patrick*"]
+
+[tool.setuptools.package-data]
+patrick = ["*.ps1", "system_prompt.txt"]

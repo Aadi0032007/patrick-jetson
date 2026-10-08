@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+models/
+logs/
+.env
+
+.qwen-asr-env/
+.chatterbox-env/
+backups/
+.env.jetson
+dist/
+build/
+deploy/constraints-orin-installed.txt

@@ -1,0 +1,2 @@
+# Install with --no-deps after requirements-qwen-asr-runtime.txt in the ASR worker.
+qwen-asr==0.0.6

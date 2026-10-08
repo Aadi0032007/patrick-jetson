@@ -1,0 +1,15 @@
+wake_phrase = "hey scout"
+session_timeout_ms = 15000
+end_silence_ms = 700
+incomplete_silence_ms = 1600
+unknown_silence_ms = 1600
+command_silence_ms = 350
+max_utterance_ms = 30000
+speech_confirmation_ms = 60
+barge_in_confirmation_ms = 300
+barge_in_requires_text = true
+acknowledgement = true
+emergency_phrases = ["stop", "patrick stop", "hey scout stop", "emergency stop"]
+sample_rate = 16000
+frame_ms = 20
+vad_aggressiveness = 3
