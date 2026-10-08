@@ -1,15 +1,58 @@
+# Python bytecode and packaging
 __pycache__/
-*.pyc
-.venv/
+*.py[cod]
 *.egg-info/
-models/
-logs/
-.env
+.eggs/
+/build/
+/dist/
 
-.qwen-asr-env/
-.chatterbox-env/
-backups/
-.env.jetson
-dist/
-build/
-deploy/constraints-orin-installed.txt
+# Local Python environments
+/.venv/
+/venv/
+/env/
+/.qwen-asr-env/
+/.chatterbox-env/
+
+# Private runtime settings; keep example templates in Git
+.env
+.env.*
+*.env
+!.env.example
+!.env.*.example
+/deploy/constraints-orin-installed.txt
+
+# Downloaded models, generated speech, logs and backups
+/models/
+/logs/
+/backups/
+*.log
+*.wav
+*.flac
+*.mp3
+*.gguf
+*.safetensors
+*.pt
+*.pth
+*.onnx
+*.engine
+*.whl
+*.zip
+
+# Local caches and test reports
+.cache/
+.huggingface/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+
+# Editor and operating-system temporary files
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db

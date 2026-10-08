@@ -16,7 +16,7 @@ os.environ.setdefault('HF_HOME', str(ROOT / 'models' / 'huggingface'))
 class QwenASRTranscriber:
     def __init__(self):
         default = ROOT / '.qwen-asr-env' / ('Scripts/python.exe' if os.name == 'nt' else 'bin/python')
-        executable = os.getenv('QWEN_ASR_PYTHON', str(default.resolve()))
+        executable = os.getenv('QWEN_ASR_PYTHON', str(default))  # Preserve Linux venv symlinks.
         if not Path(executable).is_file():
             raise FileNotFoundError('Qwen ASR environment missing; follow the Qwen speech setup in README.md')
         self.lock = threading.Lock()

@@ -9,7 +9,7 @@ The source was cleaned and tested on the Windows development machine. Full speec
 - Transfer/download Vosk, active HF V3/ASR caches, Chinese text assets, and optional Q8 files. Do not copy Windows environments/binaries or old speech-model caches.
 - Run unit tests, then speech round-trip tests, then microphone tests. Use headphones first.
 - Q8 TTS remains experimental: build on ARM64, synthesize and measure before integrating. ASR INT8 is not implemented; do not confuse dtype changes with quantization.
-- Identity Patrick, wake Hey Scout; company variants including Riverboards normalize to Revobots. Hybrid routes English/English locally, other cases to OpenAI, with offline local fallback.
+- Identity Patrick, wake Hey Patrick; company variants including Riverboards normalize to Revobots. Hybrid routes English/English locally, other cases to OpenAI, with offline local fallback.
 - Keep RAG, 3-exchange session memory, search progress speech, tool bounds and stop behavior.
 
 Detailed setup: [Jetson migration](docs/jetson-migration.md). Code/function index: [code reference](docs/code-reference.md).

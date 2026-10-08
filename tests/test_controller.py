@@ -37,7 +37,7 @@ class ConversationTests(unittest.TestCase):
         self.controller = Controller(Config(), self.provider, self.playback, self.robot)
 
     def activate(self):
-        self.controller.input(0, text="Hey Scout", final=True)
+        self.controller.input(0, text="Hey Patrick", final=True)
 
     def ask(self):
         self.activate()
@@ -70,14 +70,14 @@ class ConversationTests(unittest.TestCase):
         self.assertIn(1, self.provider.cancelled)
 
     def test_wake_phrase_boundary_and_suffix(self):
-        self.assertFalse(PhraseWakeDetector("hey scout").detect("hey scoutson"))
-        self.assertFalse(PhraseWakeDetector("hey scout").detect("revo"))
-        self.controller.input(0, speech=True, text="hey scout what is my battery level", final=True)
+        self.assertFalse(PhraseWakeDetector("hey patrick").detect("hey patrickson"))
+        self.assertFalse(PhraseWakeDetector("hey patrick").detect("revo"))
+        self.controller.input(0, speech=True, text="hey patrick what is my battery level", final=True)
         self.controller.tick(700)
         self.assertEqual(self.provider.requests, [(1, "what is my battery level")])
 
     def test_old_names_do_not_activate(self):
-        for phrase in ("hey porter", "revo", "hey boarder", "hey patrick", "patrick"):
+        for phrase in ("hey porter", "revo", "hey boarder", "hey scout", "patrick"):
             self.controller.input(0, speech=True, text=phrase, final=True)
             self.assertEqual(self.controller.state, State.IDLE)
 
@@ -220,7 +220,7 @@ class ConversationTests(unittest.TestCase):
 
     def test_acknowledgement_can_be_disabled(self):
         controller = Controller(Config(acknowledgement=False), self.provider, self.playback, self.robot)
-        controller.input(0, text="hey scout")
+        controller.input(0, text="hey patrick")
         controller.input(20, text="stop")
         self.assertEqual(self.playback.beeps, 0)
 

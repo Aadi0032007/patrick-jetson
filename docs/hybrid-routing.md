@@ -22,7 +22,7 @@ python -m patrick text --provider hybrid
 python -m patrick voice --provider hybrid --input-device 2 --output-device 5 --headphones --no-barge-in
 ```
 
-Device indices are machine-specific. Omitting `--output-device` uses the default output. Wake phrase: **Hey Scout**. Spoken identity: **Patrick**.
+Device indices are machine-specific. Omitting `--output-device` uses the default output. Wake phrase: **Hey Patrick**. Spoken identity: **Patrick**.
 
 ## One turn
 

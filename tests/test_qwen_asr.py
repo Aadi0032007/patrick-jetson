@@ -1,5 +1,7 @@
 import io
 import json
+import os
+from pathlib import Path
 import threading
 import types
 import unittest
@@ -8,6 +10,20 @@ from patrick.qwen_asr import QwenASRTranscriber, asr_dtype
 
 
 class QwenASRTests(unittest.TestCase):
+    def test_default_worker_preserves_venv_interpreter_when_it_is_a_symlink(self):
+        from patrick.qwen_asr import ROOT
+        worker = ROOT / '.qwen-asr-env' / ('Scripts/python.exe' if os.name == 'nt' else 'bin/python')
+        process = MagicMock()
+        process.stdout.readline.return_value = '{"ready":true}\n'
+        # Simulate a venv Python symlink targeting the foundation interpreter.
+        with patch.dict(os.environ, {}, clear=True), \
+             patch.object(Path, 'resolve', return_value=ROOT / 'foundation-python'), \
+             patch.object(Path, 'is_file', return_value=True), \
+             patch('patrick.qwen_asr.atexit.register'), \
+             patch('patrick.qwen_asr.subprocess.Popen', return_value=process) as start:
+            QwenASRTranscriber()
+        self.assertEqual(start.call_args.args[0][0], str(worker))
+
     def test_worker_uses_package_execution_without_shadowing_qwen_library(self):
         process = MagicMock()
         process.stdout.readline.return_value = '{"ready":true}\n'

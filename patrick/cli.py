@@ -89,7 +89,7 @@ def run_text(controller):
             if line.strip() == "/quit":
                 return
     threading.Thread(target=read, daemon=True).start()
-    print("Text simulator: type 'Hey Scout ...', then follow-ups. /state, /metrics, /quit.")
+    print(f"Text simulator: type '{controller.config.wake_phrase} ...', then follow-ups. /state, /metrics, /quit.")
     while True:
         now = time.monotonic() * 1000
         try:
@@ -135,7 +135,7 @@ def demo():
 
     provider, playback, robot = DemoProvider(), DemoPlayback(), SimRobot()
     controller = Controller(Config(), provider, playback, robot)
-    controller.input(0, text="Hey Scout", final=True, wake_started_at=-40)
+    controller.input(0, text=controller.config.wake_phrase, final=True, wake_started_at=-40)
     controller.input(100, speech=True, text="can you tell me")
     controller.input(180, speech=True, text="can you tell me")
     controller.input(780, text="can you tell me")

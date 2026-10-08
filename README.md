@@ -1,6 +1,6 @@
 # Patrick / Revobots voice assistant
 
-Patrick is a multilingual robot voice-assistant prototype. The wake phrase is **Hey Scout**; its identity is **Patrick**, created by Aditya Raj as part of Revobots. The robot hardware interface is currently simulated.
+Patrick is a multilingual robot voice-assistant prototype. The wake phrase is **Hey Patrick**; its identity is **Patrick**, created by Aditya Raj as part of Revobots. The robot hardware interface is currently simulated.
 
 The maintained speech stack is **Qwen3-ASR 0.6B + Chatterbox Multilingual V3**. English questions expecting English answers use **Ollama Qwen3.5** in hybrid mode; other input/reply language combinations use OpenAI, with local fallback. Local RAG supplies approved Revobots facts. Public web search is optional and separate from private RAG.
 
@@ -19,7 +19,7 @@ python -m unittest discover -s tests
 
 Add `--input-device N` or `--output-device N` using the device list. Omit output selection for the default speaker. Do not copy Windows device indices to Linux.
 
-Text mode accepts `Hey Scout ...`, follow-up questions, `/state`, `/metrics`, and `/quit`. During voice playback, say **stop**, pause, and ask the next question. `--no-barge-in` disables ordinary speech interruption but keeps the recognized stop path active. Stop spotting still uses an English Vosk model.
+Text mode accepts `Hey Patrick ...`, follow-up questions, `/state`, `/metrics`, and `/quit`. During voice playback, say **stop**, pause, and ask the next question. `--no-barge-in` disables ordinary speech interruption but keeps the recognized stop path active. Stop spotting still uses an English Vosk model.
 
 For loudspeakers, configure and test actual OS/hardware acoustic echo cancellation, then use `--echo-cancelled`. That flag declares an existing AEC setup; it does not enable AEC. Echo/noise can still cause recognition errors. Do not remove Vosk: Qwen ASR handles complete questions, while Vosk handles wake/stop and endpoint spotting.
 

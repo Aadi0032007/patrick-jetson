@@ -8,7 +8,7 @@ except ModuleNotFoundError:  # JetPack 6's Python 3.10.
 
 @dataclass(frozen=True)
 class Config:
-    wake_phrase: str = "hey scout"
+    wake_phrase: str = "hey patrick"
     session_timeout_ms: int = 15000
     end_silence_ms: int = 700
     incomplete_silence_ms: int = 1600
@@ -20,7 +20,7 @@ class Config:
     barge_in_enabled: bool = True
     barge_in_requires_text: bool = True
     acknowledgement: bool = True
-    emergency_phrases: tuple[str, ...] = ("stop", "patrick stop", "hey scout stop", "emergency stop")
+    emergency_phrases: tuple[str, ...] = ("stop", "patrick stop", "hey patrick stop", "emergency stop")
     sample_rate: int = 16000
     frame_ms: int = 20
     vad_aggressiveness: int = 2

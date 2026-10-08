@@ -49,7 +49,7 @@ class AudioTests(unittest.TestCase):
             def AcceptWaveform(self, pcm):
                 self.index = pcm[0]
                 return self.index == 0
-            def Result(self): return '{"text":"hey scout"}'
+            def Result(self): return '{"text":"hey patrick"}'
             def PartialResult(self): return '{"partial":""}'
         class Vad:
             def __init__(self, *args): pass
@@ -129,9 +129,9 @@ class AudioTests(unittest.TestCase):
                 self.index = pcm[0]
                 return self.index == 3
             def Result(self):
-                return json.dumps({"text": "hey scout what is my battery level"})
+                return json.dumps({"text": "hey patrick what is my battery level"})
             def PartialResult(self):
-                text = "hey scout" if self.index == 0 else "hey scout what is my battery level" if self.index < 3 else ""
+                text = "hey patrick" if self.index == 0 else "hey patrick what is my battery level" if self.index < 3 else ""
                 return json.dumps({"partial": text})
             def Reset(self):
                 pass

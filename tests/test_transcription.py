@@ -14,7 +14,7 @@ class TranscriptionTests(unittest.TestCase):
         class Provider:
             def submit(self, *args): raise AssertionError("Empty speech reached model")
             def poll(self): return []
-        provider = TranscriptionProvider(Provider(), Transcriber(), lambda: b"pcm", "hey scout")
+        provider = TranscriptionProvider(Provider(), Transcriber(), lambda: b"pcm", "hey patrick")
         provider.submit(1, "noise")
         deadline = time.monotonic() + 1
         while provider.jobs and time.monotonic() < deadline:
@@ -69,14 +69,14 @@ class TranscriptionTests(unittest.TestCase):
             def transcribe(self, pcm):
                 entered.set()
                 release.wait(1)
-                return "Hey Scout, what time is it?"
+                return "Hey Patrick, what time is it?"
         class Provider:
             requests = []
             def submit(self, *args): self.requests.append(args)
             def cancel(self, turn): pass
             def poll(self): return []
         downstream = Provider()
-        provider = TranscriptionProvider(downstream, Transcriber(), lambda: b"pcm", "hey scout")
+        provider = TranscriptionProvider(downstream, Transcriber(), lambda: b"pcm", "hey patrick")
         provider.submit(1, "vosk guess")
         self.assertTrue(entered.wait(1))
         provider.cancel(1)
@@ -92,7 +92,7 @@ class TranscriptionTests(unittest.TestCase):
         class Transcriber:
             def transcribe(self, pcm):
                 assert pcm == b"pcm"
-                return "Hey Scout, tell me about Riverbots?"
+                return "Hey Patrick, tell me about Riverbots?"
         class Provider:
             def submit(self, turn, text):
                 self.result = (turn, text)
@@ -100,7 +100,7 @@ class TranscriptionTests(unittest.TestCase):
             def poll(self): return []
             def cancel(self, turn): pass
         downstream = Provider()
-        provider = TranscriptionProvider(downstream, Transcriber(), lambda: b"pcm", "hey scout")
+        provider = TranscriptionProvider(downstream, Transcriber(), lambda: b"pcm", "hey patrick")
         provider.submit(3, "incorrect Vosk guess")
         self.assertTrue(submitted.wait(1))
         self.assertEqual(downstream.result, (3, "tell me about Revobots?"))
@@ -110,7 +110,7 @@ class TranscriptionTests(unittest.TestCase):
         submitted = threading.Event()
         class Transcriber:
             last_language = "Hindi"
-            def transcribe(self, pcm): return "Hey Scout, नमस्ते, आप कैसे हैं?"
+            def transcribe(self, pcm): return "Hey Patrick, नमस्ते, आप कैसे हैं?"
         class Provider:
             def submit(self, turn, text):
                 self.result = (turn, text)
@@ -118,7 +118,7 @@ class TranscriptionTests(unittest.TestCase):
             def poll(self): return [Response(1, text="मैं ठीक हूँ।", final=True)]
             def cancel(self, turn): pass
         downstream = Provider()
-        provider = TranscriptionProvider(downstream, Transcriber(), lambda: b"pcm", "hey scout")
+        provider = TranscriptionProvider(downstream, Transcriber(), lambda: b"pcm", "hey patrick")
         provider.submit(1, "English spotter guess")
         self.assertTrue(submitted.wait(1))
         self.assertEqual(downstream.result, (1, "नमस्ते, आप कैसे हैं?"))
